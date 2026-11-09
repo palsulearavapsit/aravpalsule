@@ -1,0 +1,49 @@
+.admin-structured{display:grid;gap:12px}
+.admin-project-card,.admin-skill-card{border:1px solid var(--line);background:#0c0e0f;padding:15px}
+.admin-project-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font:9px var(--mono);color:#a3a6a4;letter-spacing:.08em}
+.admin-project-heading button,.admin-skill-card>button{display:inline-flex;align-items:center;gap:6px;background:transparent;border:1px solid rgba(255,255,255,.1);padding:6px 8px;color:#9b9e9f;font:8px var(--mono);cursor:pointer}
+.admin-project-heading button:hover,.admin-skill-card>button:hover{color:#e99d95;border-color:rgba(233,157,149,.4)}
+.admin-field-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.admin-field-grid label,.admin-full-field,.admin-skill-card label{display:grid;gap:6px;color:#999d9e;font:8px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.admin-field-grid input,.admin-field-grid select,.admin-full-field textarea,.admin-skill-card input{width:100%;background:#090a0b;color:var(--text);border:1px solid var(--line);padding:9px 10px;font:10px/1.5 var(--mono);outline:none}
+.admin-full-field{margin-top:10px}
+.admin-full-field textarea{resize:vertical;min-height:62px}
+.admin-full-field small{font:8px var(--mono);letter-spacing:0;text-transform:none;color:#7f8384}
+.admin-field-grid input:focus,.admin-field-grid select:focus,.admin-full-field textarea:focus,.admin-skill-card input:focus{border-color:var(--lime)}
+.admin-skill-card{display:grid;grid-template-columns:1fr 2fr auto;gap:10px;align-items:end}
+.admin-skill-card>button{height:36px;white-space:nowrap}
+.admin-add-button{display:inline-flex;align-items:center;justify-self:start;gap:7px;background:transparent;border:1px solid rgba(181,211,154,.28);padding:9px 11px;color:var(--lime);font:9px var(--mono);cursor:pointer}
+.admin-add-button:hover{background:rgba(181,211,154,.07)}
+@media(max-width:650px){.admin-field-grid{grid-template-columns:1fr}.admin-skill-card{grid-template-columns:1fr}.admin-skill-card>button{justify-self:start}.admin-project-card,.admin-skill-card{padding:11px}}
+.admin-trigger{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;background:transparent;border:1px solid rgba(255,255,255,.15);color:#a8abad;font:9px var(--mono);cursor:pointer;transition:.2s}
+.admin-trigger:hover{border-color:var(--lime);color:var(--lime)}
+.admin-overlay{position:fixed;z-index:80;inset:0;padding:20px;display:grid;place-items:center;background:rgba(0,0,0,.78);backdrop-filter:blur(12px)}
+.admin-panel{position:relative;width:min(780px,100%);max-height:min(88vh,900px);overflow:auto;padding:28px;background:#101214;border:1px solid var(--line);box-shadow:0 24px 90px #0009}
+.admin-header{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.admin-header .eyebrow{margin:0 0 9px}.admin-header h2{font:500 28px Manrope,sans-serif;letter-spacing:-.05em;margin:0}
+.admin-login{display:grid;gap:17px;padding:22px 0}.admin-login>p,.admin-notice p,.admin-help{font-size:12px;line-height:1.7;color:#9b9ea0;margin:0}
+.admin-login label{display:grid;gap:7px;color:#adb0b0;font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.admin-login input,.admin-section-select select,.admin-json{width:100%;background:#090a0b;color:var(--text);border:1px solid var(--line);padding:11px;font:12px var(--mono);outline:none}
+.admin-login input:focus,.admin-section-select select:focus,.admin-json:focus{border-color:var(--lime)}
+.admin-login .button{justify-self:start;border:0;cursor:pointer}.admin-login .button:disabled,.admin-save:disabled{opacity:.65;cursor:wait}
+.admin-notice{padding:24px 0}.admin-notice h3{font:500 18px Manrope;margin:0 0 9px}.admin-notice code{color:var(--lime);font:10px var(--mono)}
+.admin-toolbar{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:15px 0;border-bottom:1px solid var(--line);font:9px var(--mono);color:#999d9e}
+.admin-toolbar button{display:inline-flex;align-items:center;gap:7px;background:transparent;border:1px solid var(--line);padding:7px 9px;font:9px var(--mono);cursor:pointer}
+.admin-editor{padding-top:18px}.admin-section-select{display:grid;gap:8px;margin-bottom:17px;font:9px var(--mono);letter-spacing:.1em;color:#929697}
+.admin-json{min-height:260px;resize:vertical;font:11px/1.65 var(--mono)}
+.admin-save{margin-top:16px;border:0;cursor:pointer}.admin-media>p{font-size:11px;color:#919596}
+.upload-dropzone{min-height:180px;padding:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;border:1px dashed rgba(255,255,255,.2);background:#0c0e0f;transition:border-color .2s,background .2s}
+.upload-dropzone>svg{color:var(--lime)}.upload-dropzone strong{font:500 14px Manrope}.upload-dropzone>span{font:9px var(--mono);color:#8a8e8f}
+.upload-dropzone.is-dragging{border-color:var(--lime);background:rgba(181,211,154,.08)}
+.upload-control{position:relative;display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border:1px solid rgba(181,211,154,.35);color:var(--lime);font:9px var(--mono);cursor:pointer}
+.upload-control:hover{background:rgba(181,211,154,.08)}.upload-control input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.upload-control input:disabled{cursor:wait}
+.admin-media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:10px;margin-top:17px}
+.admin-media-grid figure{position:relative;margin:0;background:#090a0b;border:1px solid var(--line)}
+.admin-media-grid img{display:block;width:100%;height:120px;object-fit:cover}
+.admin-media-grid figcaption{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;font:8px var(--mono);color:#a6a8a8}
+.admin-media-grid figcaption button{display:grid;place-items:center;flex:none;background:transparent;border:0;color:#aaa;cursor:pointer}.admin-media-grid figcaption button:hover{color:#ef9289}
+.admin-message,.admin-error{font:10px/1.6 var(--mono);padding:10px 12px;margin:14px 0 0;border:1px solid rgba(181,211,154,.22);color:var(--lime)}
+.admin-error{border-color:rgba(233,157,149,.3);color:#efa39b}
+.spin{animation:admin-spin 1s linear infinite}@keyframes admin-spin{to{transform:rotate(360deg)}}
+@media(max-width:650px){.admin-overlay{padding:10px}.admin-panel{max-height:94vh;padding:20px 15px}.admin-header h2{font-size:24px}.admin-toolbar{align-items:flex-start}.admin-json{min-height:200px}}
